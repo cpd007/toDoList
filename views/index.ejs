@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+    <h1><% const day = new Date() %>
+            <%= day.toDateString() %> </h1>
+            <% for(var i = 0; i < showList1.length; i++) { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= showList1[i] %></p>
+                </div>
+                <% } %>
+                <form action="/" method="post">
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="list" value="Work" list="">+</button>
+                  </form>
+            
+        
+            
+            
+    
+
+  <%- include("partials/footer.ejs") %>
